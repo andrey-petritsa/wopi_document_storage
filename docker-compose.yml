@@ -1,0 +1,35 @@
+version: "3.6"
+services:
+  libreoffice-app:
+    image: libreoffice/online:master
+    container_name: libreoffice-app
+    ports:
+      - "9980:9980"
+    volumes:
+      - ./config:/etc/loolwsd/
+    environment:
+      - username=admin
+      - password=secret
+      - extra_params=--o:ssl.enable=false
+
+  libreoffice-app-colabora:
+    image: collabora/code:24.04.1.4.1
+    container_name: libreoffice-app-colabora
+    ports:
+      - "9981:9980"
+    environment:
+      - username=admin
+      - password=secret
+      - extra_params=--o:ssl.enable=false
+
+  onlyoffice-docs:
+    image: onlyoffice/documentserver
+    container_name: onlyoffice-documentserver
+    ports:
+      - "9982:80"
+      - "9983:8000"
+    environment:
+      WOPI_ENABLED: "true"
+
+
+

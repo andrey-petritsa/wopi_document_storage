@@ -1,0 +1,77 @@
+<html>
+    <head runat="server">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width" />
+
+        <title>ONLYOFFICE Document Editors</title>
+        <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                -ms-content-zooming: none;
+            }
+
+            #office_frame {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: 0;
+                border: none;
+                display: block;
+            }
+        </style>
+    </head>
+
+
+
+    <body>
+        <form action="http://45.153.68.205:9980/loleaflet/6a844e4/loleaflet.html?WOPISrc=http://45.153.68.205:8000/wopi/files/test.docx"  enctype="multipart/form-data" method="post">
+            <input name="access_token" value="test" type="text"/>
+            <input type="submit" value="Посмотреть LibreOffice пример"/>
+        </form>
+
+        <form action="http://45.153.68.205:9981/browser/f12ee1f/cool.html?WOPISrc=http://45.153.68.205:8000/wopi/files/test.docx"  enctype="multipart/form-data" method="post">
+            <input name="access_token" value="test" type="text"/>
+            <input type="submit" value="Посмотреть Collabora пример"/>
+        </form>
+
+
+        <form id="office_form" name="office_form" target="office_frame" action="http://45.153.68.205:9982/hosting/wopi/word/edit?embed=1&rs=DC_LLCC&dchat=DISABLE_CHAT&embed=EMBEDDED&fs=FULLSCREEN&hid=HOST_SESSION_ID&rec=RECORDING&sc=SESSION_CONTEXT&thm=THEME_ID&ui=UI_LLCC&wopisrc=http://45.153.68.205:8000/wopi/files/test.docx" method="post">
+            <input name="access_token" value="<%= token %>" type="hidden" />
+            <input name="access_token_ttl" value="<%= tokenTtl %>" type="hidden" />
+            <input type="submit" value="Посмотреть Onlyoffice пример"/>
+        </form>
+
+        <form id="r7_office_form" name="r7_office_form" target="r7_office_frame" action="http://45.153.68.205:9984/hosting/wopi/word/edit?rs=DC_LLCC&dchat=DISABLE_CHAT&embed=EMBEDDED&fs=FULLSCREEN&hid=HOST_SESSION_ID&rec=RECORDING&sc=SESSION_CONTEXT&thm=THEME_ID&ui=UI_LLCC&wopisrc=http://45.153.68.205:8000/wopi/files/test.docx" method="post">
+            <input name="access_token" value="<%= token %>" type="hidden" />
+            <input name="access_token_ttl" value="<%= tokenTtl %>" type="hidden" />
+            <input type="submit" value="Посмотреть r7 office пример"/>
+        </form>
+
+
+        <span id="frameholder"></span>
+        <script type="text/javascript">
+            // var frameholder = document.getElementById('frameholder');
+            // var office_frame = document.createElement('iframe');
+            // office_frame.name = 'office_frame';
+            // office_frame.id = 'office_frame';
+            //
+            // office_frame.title = 'Office Frame';
+            // office_frame.setAttribute('allowfullscreen', 'true');
+            //
+            // office_frame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation allow-popups-to-escape-sandbox allow-downloads allow-modals');
+            // office_frame.setAttribute('allow', 'autoplay camera microphone display-capture');
+            // frameholder.appendChild(office_frame);
+
+        </script>
+
+    </body>
+</html>
